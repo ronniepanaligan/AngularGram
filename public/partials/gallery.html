@@ -1,0 +1,18 @@
+<div class="row gallery-view">
+	<div class="col-md-10 col-md-offset-2 ">
+
+	<div ng-repeat="post in posts">
+
+			<div class="thumbnail">
+				<p class="text-right">{{post.createdAt | date:"h:mma 'on' MMM d, y"}}</p>
+      	<img ng-src="{{post.picture.url | fpConvert: {filter:'sharpen', w:650, h:900} }}" />
+      	<div class="caption text-center">
+        	<h3>{{post.caption}}</h3>
+
+        	<div class="text-right"><a ng-href="/#/detail/{{post._id}}" class="btn btn-danger" role="button">View</a> </div>
+      	</div>
+    	</div>
+
+	</div>
+	</div>
+</div>
